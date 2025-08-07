@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import VideoInstitucional from '../components/VideoInstitucional.astro';
+import SocialFeed from '../components/SocialFeed.astro';
+import UltimoCulto from '../components/UltimoCulto.astro';
+import Footer from '../components/Footer.astro';
+
+// AQUI SERÁ ONDE VOCÊ BUSCARÁ OS DADOS DO SANITY
+// Exemplo:
+// import { getSanityClient } from '../lib/sanity';
+// const galeriaData = await getSanityClient().fetch(`*[_type == "galeriaCulto"][0]`);
+---
+
+<Layout title="Ministério Filadélfia">
+	<Header />
+	<main>
+		<Hero />
+		<VideoInstitucional />
+		<SocialFeed />
+		
+		<UltimoCulto />
+
+	</main>
+	<Footer />
+</Layout>

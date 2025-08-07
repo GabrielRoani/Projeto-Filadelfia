@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+
+const cards = [
+    { title: "Fale com nosso pastor", cta: "SAIBA MAIS" },
+    { title: "Oferta, Dízimos e Primícias", cta: "PARTICIPE" },
+    { title: "Conheça a Rede de Jovens 7.12", cta: "CONHECER" },
+    { title: "Conheça os Cultos da Graça", cta: "CONHECER" },
+];
+---
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-grid">
+            {cards.map(card => (
+                <a href="#" class="hero-card">
+                    <h3>{card.title}</h3>
+                    <span>{card.cta}</span>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

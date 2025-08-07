@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+
+// QUANDO INTEGRAR COM SANITY, VOCÊ RECEBERÁ AS FOTOS ASSIM:
+// const { fotos } = Astro.props;
+// Por enquanto, usaremos placeholders.
+const fotosPlaceholder = [
+    '/placeholder-culto-1.jpg',
+    '/placeholder-culto-2.jpg',
+    '/placeholder-culto-3.jpg',
+];
+---
+<section class="ultimo-culto">
+    <div class="container">
+        <div class="ultimo-culto-container">
+            <div class="ultimo-culto-texto">
+                <h2>Veja as fotos do último culto!</h2>
+                <a href="/galeria" class="ultimo-culto-cta">CLIQUE AQUI PARA VER</a>
+            </div>
+            <div class="ultimo-culto-fotos">
+                {fotosPlaceholder.map(fotoSrc => <img src={fotoSrc} alt="Foto do culto" />)}
+                 <img src="/placeholder-culto-1.jpg" alt="Foto do culto" />
+            </div>
+        </div>
+    </div>
+</section>
